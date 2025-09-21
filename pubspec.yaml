@@ -1,0 +1,54 @@
+name: eiga_learn
+description: "A new Flutter project."
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.9.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  go_router: ^16.2.1
+  tflite_flutter: ^0.11.0
+  sqflite: ^2.3.0
+  path: ^1.8.3
+  video_player: ^2.8.1
+  chewie: ^1.7.4
+  file_picker: ^10.3.3
+  path_provider: ^2.0.0
+  http: ^1.5.0
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  hooks_riverpod: ^3.0.0
+  flutter_hooks: ^0.21.0
+  onnx_translation: ^0.1.2
+  ffi: ^2.1.4
+  intl: ^0.20.2
+  cross_platform_video_thumbnails: ^0.0.2
+  ffmpeg_kit_flutter: ^6.0.3
+  fc_native_video_thumbnail: ^0.17.2
+  uuid: ^4.5.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  hive_generator: ^2.0.1
+  build_runner: ^2.4.7
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/models/mt-ja-en/encoder_model.onnx
+    - assets/models/mt-ja-en/decoder_model.onnx
+    - assets/models/mt-ja-en/source.spm
+    - assets/models/mt-ja-en/target.spm
+    - assets/models/mt-ja-en/vocab.json
+    - assets/models/mt-ja-en/config.json
+    - assets/models/mt-ja-en/tokenizer_config.json
+    - assets/models/mt-ja-en/special_tokens_map.json
+    - assets/models/mt-ja-en/generation_config.json
+    - assets/ffmpeg/ffmpeg.exe
