@@ -48,7 +48,8 @@ app.*.map.json
 assets/models/mt-ja-en
 assets/ffmpeg/ffmpeg.exe
 assets/models/mt-ja-en/
-
+assets/JMdict_e/
 
 assets/models/
 assets/ffmpeg/
+assets/JMdict_e/JMdict_e.xml

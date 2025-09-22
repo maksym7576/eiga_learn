@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:io';
 import 'dart:ui';
 
@@ -7,6 +8,7 @@ import 'package:eiga_learn/services/VideoService.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'dart:developer' as developer;
 import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -96,7 +98,11 @@ class _MainScreenState extends ConsumerState<MainScreen>
       String videoObjectId = await ref
           .read(videoServiceProvider.notifier)
           .createVideoObject(title, _videoFile!, _srtFile!);
-
+      final preparedForModel = await ref.read(textPreparingServiceProvider).srtDepack(srtPath: _srtFile!, videoId: videoObjectId);
+      developer.log('For model');
+      final jsonList = preparedForModel.map((unit) => unit.toJson()).toList();
+      final prettyJson = const JsonEncoder.withIndent('  ').convert(jsonList);
+      developer.log('Prepared for model (JSON):\n$prettyJson');
       setState(() {
         _videoFile = null;
         _srtFile = null;

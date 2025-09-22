@@ -4,6 +4,7 @@
 
 list(APPEND FLUTTER_PLUGIN_LIST
   fc_native_video_thumbnail
+  mecab_for_flutter
 )
 
 list(APPEND FLUTTER_FFI_PLUGIN_LIST

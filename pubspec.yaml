@@ -31,7 +31,11 @@ dependencies:
   ffmpeg_kit_flutter: ^6.0.3
   fc_native_video_thumbnail: ^0.17.2
   uuid: ^4.5.1
-
+  json_serializable: ^6.8.0
+  mecab_for_flutter: ^1.0.6
+  sqflite_common_ffi: ^2.3.0
+  xml: ^6.1.0
+  characters: ^1.2.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -52,3 +56,5 @@ flutter:
     - assets/models/mt-ja-en/special_tokens_map.json
     - assets/models/mt-ja-en/generation_config.json
     - assets/ffmpeg/ffmpeg.exe
+    - assets/JMdict_e/JMdict_e.xml
+    - assets/dict/
